@@ -1,0 +1,144 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Professional Dashboard Theme
+   * Optimized for Expense Tracker application
+   * Color scheme: Modern blue/indigo with accent colors for categories
+   */
+  :root {
+    /* Main colors */
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Primary: Modern Blue */
+    --primary: 216 98% 52%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary: Light Gray */
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 224 71% 4%;
+
+    /* Muted: Subtle gray */
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Vibrant Teal for highlights */
+    --accent: 174 76% 48%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Destructive: Red for warnings */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border and input colors */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 216 98% 52%;
+
+    /* Sidebar */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 216 98% 52%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 174 76% 48%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 224 32% 20%;
+    --sidebar-ring: 216 98% 52%;
+
+    /* Success: Green */
+    --success: 142 71% 45%;
+
+    /* Warning: Amber */
+    --warning: 38 92% 50%;
+
+    /* Chart colors for category breakdown */
+    --chart-1: 216 98% 52%;  /* Blue - Primary */
+    --chart-2: 174 76% 48%;  /* Teal - Accent */
+    --chart-3: 142 71% 45%;  /* Green - Success */
+    --chart-4: 38 92% 50%;   /* Amber - Warning */
+    --chart-5: 10 86% 53%;   /* Red - Destructive */
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 32% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 32% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 216 98% 52%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 224 32% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 224 32% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 174 76% 48%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 224 71% 4%;
+
+    --border: 224 32% 20%;
+    --input: 224 32% 20%;
+    --ring: 216 98% 52%;
+
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 216 98% 52%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 174 76% 48%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 224 32% 20%;
+    --sidebar-ring: 216 98% 52%;
+
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+
+    --chart-1: 216 98% 52%;
+    --chart-2: 174 76% 48%;
+    --chart-3: 142 71% 45%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 10 86% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
